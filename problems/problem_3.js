@@ -6,13 +6,28 @@
 function largestPrimeFactorOf(num) {
   for (var i = Math.floor(num / 2); i > 1; i--) {
     if ((num % i) === 0 ) {
-      console.log(i)
+      // console.log(i)
       largestPrimeFactorOf(i)
     }
   }
 }
 
-console.log(largestPrimeFactorOf(856))
+// console.log(largestPrimeFactorOf(856))
 
-// optimized:
+// above incorrect; the following is from the internet:
+(function euler003() {
+  // starting index (first prime)
+  var i = 2;
+  var num = 600851475143;
 
+  while (num > i) {
+    if (num % i === 0) {
+      num = num / i;
+    }
+
+    i++;
+  }
+
+  console.log(i);
+  return i;
+}());
