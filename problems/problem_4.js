@@ -30,7 +30,7 @@ function main() {
   const productArray = []
 
   for (let i = startNum; i > 99; i--) {
-    for(let j = startNum; j > 99; j --) {
+    for(let j = startNum; j > 99; j--) {
       productArray.push(findPalindrome(i, j))
     }
   }
